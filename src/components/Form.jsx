@@ -1,7 +1,9 @@
 import { SearchIcon } from '@heroicons/react/solid'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { AppContext } from '../App'
 
-export default function Form({ setQuery }) {
+export default function Form() {
+    const context = useContext(AppContext)
     const [input, setInput] = useState('')
 
     const handleEnterPress = (e) => {
@@ -9,7 +11,7 @@ export default function Form({ setQuery }) {
     }
 
     const handleSubmit = () => {
-        setQuery(input)
+        context.setQuery(input)
         setInput('')
     }
 
