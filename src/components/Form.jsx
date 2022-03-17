@@ -11,7 +11,8 @@ export default function Form() {
     }
 
     const handleSubmit = () => {
-        context.setQuery(input)
+        input &&
+            context.setQuery(input)
         setInput('')
     }
 
