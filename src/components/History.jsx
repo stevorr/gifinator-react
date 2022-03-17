@@ -9,7 +9,7 @@ export default function History() {
             {context.history.map((item, i) => {
                 return item &&
                     <div className="carousel-item h-40 w-full" key={i} onClick={() => context.setData(item)}>
-                        <img className="w-full" src={item.images.original.url} alt={item.title} />
+                        <img className="w-full cursor-pointer hover:opacity-90" src={item.images.original.url} alt={item.title} />
                     </div>
             })}
         </div>
