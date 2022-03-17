@@ -44,11 +44,11 @@ export default function App() {
   }
 
   return (
-    <AppContext.Provider value={{ data, setQuery, history, setHistory, setDrawerOpen }}>
+    <AppContext.Provider value={{ data, setData, setQuery, history, setHistory, setDrawerOpen }}>
       <div className="drawer drawer-end h-screen w-full" onClick={handleClickOfftoClose}>
         <input id="history-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} readOnly />
-        <div className="drawer-content my-2">
-          <div className="flex flex-col flex-initial items-center gap-3">
+        <div className="drawer-content max-h-screen my-2">
+          <div className="flex flex-col flex-initial items-center max-h-screen gap-3">
             <span className="text-3xl">Giphinator</span>
             <Form />
             {data && <Giphy />}
@@ -61,7 +61,8 @@ export default function App() {
         <div className="drawer-side">
           <label htmlFor="history-drawer" className="drawer-overlay"></label>
           <ul id="history" className="menu p-4 w-80 overflow-y-auto bg-base-100 text-base-content">
-            <span className="text-xl mb-2">History</span>
+            <span className="text-xl">History</span>
+            <div className="divider my-1"></div>
             <History />
           </ul>
         </div>
