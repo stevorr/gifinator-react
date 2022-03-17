@@ -8,7 +8,7 @@ export default function CopyToClipboard() {
 
     const copy = async () => {
         if (context.data) {
-            await navigator.clipboard.writeText(context.data.images.original.url);
+            await navigator.clipboard.writeText(context.data.images.original.webp);
             showToolTip()
         }
     }
