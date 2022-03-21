@@ -45,7 +45,7 @@ export default function App() {
 
   return (
     <AppContext.Provider value={{ data, setData, setQuery, history, setHistory, setDrawerOpen }}>
-      <div className="drawer drawer-end h-screen w-full" onClick={handleClickOfftoClose}>
+      <div className="drawer drawer-end h-screen w-screen" onClick={handleClickOfftoClose}>
         <input id="history-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} readOnly />
         <div className="drawer-content max-h-screen my-2">
           <div className="flex flex-col flex-initial items-center max-h-fit gap-3">
