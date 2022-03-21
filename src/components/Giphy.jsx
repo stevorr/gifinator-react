@@ -6,7 +6,7 @@ export default function Giphy() {
 
     return (
         <div className={`max-h-fit`}>
-            <img src={context.data.images.original.url} alt={context.data.title} />
+            <img className="rounded-xl" src={context.data.images.original.url} alt={context.data.title} />
         </div>
     )
 }

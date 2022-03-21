@@ -48,14 +48,17 @@ export default function App() {
       <div className="drawer drawer-end h-screen w-full" onClick={handleClickOfftoClose}>
         <input id="history-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} readOnly />
         <div className="drawer-content max-h-screen my-2">
-          <div className="flex flex-col flex-initial items-center max-h-screen gap-3">
-            <span className="text-3xl">Giphinator</span>
+          <div className="flex flex-col flex-initial items-center max-h-fit gap-3">
+            <h1 className="font-title font-extrabold">
+              <div className="text-5xl">Giphinator</div>
+            </h1>
             <Form />
             {data && <Giphy />}
             <div className="flex flex-row gap-2">
               <ClipboardButton />
               <ShowHistoryButton />
             </div>
+            <div className="text-xs"><span>Made with </span><a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)">⚛️</a><span> by Stephen Orr</span></div>
           </div>
         </div>
         <div className="drawer-side">
